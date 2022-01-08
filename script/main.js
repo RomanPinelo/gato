@@ -22,6 +22,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla11.hasChildNodes();
@@ -30,6 +31,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -42,6 +44,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla12.hasChildNodes();
@@ -50,6 +53,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -62,6 +66,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla13.hasChildNodes();
@@ -70,6 +75,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -82,6 +88,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla21.hasChildNodes();
@@ -90,6 +97,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -102,6 +110,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla22.hasChildNodes();
@@ -110,6 +119,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -122,6 +132,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla23.hasChildNodes();
@@ -130,6 +141,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -142,6 +154,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla31.hasChildNodes();
@@ -150,6 +163,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -162,6 +176,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla32.hasChildNodes();
@@ -170,6 +185,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
@@ -182,6 +198,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
+        empate();
       }
     } else {
       let filled = casilla33.hasChildNodes();
@@ -190,9 +207,18 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
+        empate();
       }
     }
   });
+}
+
+function empate() {
+  let allFilled = casilla11.hasChildNodes() && casilla12.hasChildNodes() && casilla13.hasChildNodes() && casilla21.hasChildNodes() && casilla22.hasChildNodes() && casilla23.hasChildNodes() && casilla31.hasChildNodes() && casilla32.hasChildNodes() && casilla33.hasChildNodes();
+  console.log(allFilled);
+  if (allFilled) {
+    tie.classList.toggle('visible');
+  }
 }
 
 
