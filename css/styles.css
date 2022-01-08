@@ -135,7 +135,7 @@ p {
 }
 
 /************************************************************* 
-  Mensaje empate
+  Mensaje empate, turno y ganador
 *************************************************************/
 .tie {
   display: none;
@@ -143,4 +143,8 @@ p {
 
 .tie.visible {
   display: block;
+}
+
+.turno.noVisible {
+  display: none;
 }

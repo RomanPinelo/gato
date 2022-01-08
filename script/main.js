@@ -9,6 +9,7 @@ var casilla23 = document.getElementById("cas6");
 var casilla31 = document.getElementById("cas7");
 var casilla32 = document.getElementById("cas8");
 var casilla33 = document.getElementById("cas9");
+var displayTurn = document.getElementById("turn");
 var tie = document.getElementById("Tie");
 var turno = true;
 
@@ -218,9 +219,8 @@ function empate() {
   console.log(allFilled);
   if (allFilled) {
     tie.classList.toggle('visible');
+    displayTurn.classList.toggle('noVisible');
   }
 }
-
-
 
 inicio();
