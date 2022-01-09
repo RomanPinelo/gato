@@ -413,10 +413,19 @@ function winnerOrTie() {
 
 function reinicio() {
   setTimeout(() => {
-    let opcion = confirm("¿Deseas empezar un nuevo juego?");
-    if (opcion == true) {
-      location.reload();
-    }
+    Swal.fire({
+      title: '¿Deseas empezar un nuevo juego?',
+      text: "",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ok'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        location.reload();
+      }
+    })
   }, 1500);
 }
 
