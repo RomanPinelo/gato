@@ -25,9 +25,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla11.hasChildNodes();
@@ -36,9 +34,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -51,9 +47,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla12.hasChildNodes();
@@ -62,9 +56,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -77,9 +69,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla13.hasChildNodes();
@@ -88,9 +78,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -103,9 +91,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla21.hasChildNodes();
@@ -114,9 +100,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -129,9 +113,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla22.hasChildNodes();
@@ -140,9 +122,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -155,9 +135,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla23.hasChildNodes();
@@ -166,9 +144,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -181,9 +157,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla31.hasChildNodes();
@@ -192,9 +166,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -207,9 +179,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla32.hasChildNodes();
@@ -218,9 +188,7 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
@@ -233,9 +201,7 @@ function inicio() {
         console.log('equis');
         nuPlayer.innerHTML = '2';
         turno = false;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     } else {
       let filled = casilla33.hasChildNodes();
@@ -244,218 +210,204 @@ function inicio() {
         console.log('circulo');
         nuPlayer.innerHTML = '1';
         turno = true;
-        ganador1();
-        ganador2();
-        empate();
+        winnerOrTie();
       }
     }
   });
 }
 
-function empate() {
-  let allFilled = casilla11.hasChildNodes() && casilla12.hasChildNodes() && casilla13.hasChildNodes() && casilla21.hasChildNodes() && casilla22.hasChildNodes() && casilla23.hasChildNodes() && casilla31.hasChildNodes() && casilla32.hasChildNodes() && casilla33.hasChildNodes();
-  if (allFilled) {
-    tie.classList.toggle('visible');
-    displayTurn.classList.toggle('noVisible');
-    reinicio();
-  }
-}
+function winnerOrTie() {
+  let horizontal1 = casilla11.hasChildNodes() && casilla12.hasChildNodes() && casilla13.hasChildNodes();
+  let horizontal2 = casilla21.hasChildNodes() && casilla22.hasChildNodes() && casilla23.hasChildNodes();
+  let horizontal3 = casilla31.hasChildNodes() && casilla32.hasChildNodes() && casilla33.hasChildNodes();
+  let vertical1 = casilla11.hasChildNodes() && casilla21.hasChildNodes() && casilla31.hasChildNodes();
+  let vertical2 = casilla12.hasChildNodes() && casilla22.hasChildNodes() && casilla32.hasChildNodes();
+  let vertical3 = casilla13.hasChildNodes() && casilla23.hasChildNodes() && casilla33.hasChildNodes();
+  let diagonal1 = casilla11.hasChildNodes() && casilla22.hasChildNodes() && casilla33.hasChildNodes();
+  let diagonal2 = casilla31.hasChildNodes() && casilla22.hasChildNodes() && casilla13.hasChildNodes();
 
-function ganador1() {
-  horizontal1 = casilla11.hasChildNodes() && casilla12.hasChildNodes() && casilla13.hasChildNodes();
-  horizontal2 = casilla21.hasChildNodes() && casilla22.hasChildNodes() && casilla23.hasChildNodes();
-  horizontal3 = casilla31.hasChildNodes() && casilla32.hasChildNodes() && casilla33.hasChildNodes();
-  vertical1 = casilla11.hasChildNodes() && casilla21.hasChildNodes() && casilla31.hasChildNodes();
-  vertical2 = casilla12.hasChildNodes() && casilla22.hasChildNodes() && casilla32.hasChildNodes();
-  vertical3 = casilla13.hasChildNodes() && casilla23.hasChildNodes() && casilla33.hasChildNodes();
-  diagonal1 = casilla11.hasChildNodes() && casilla22.hasChildNodes() && casilla33.hasChildNodes();
-  diagonal2 = casilla31.hasChildNodes() && casilla22.hasChildNodes() && casilla13.hasChildNodes();
+  let allFilled = casilla11.hasChildNodes() && casilla12.hasChildNodes() && casilla13.hasChildNodes() && casilla21.hasChildNodes() && casilla22.hasChildNodes() && casilla23.hasChildNodes() && casilla31.hasChildNodes() && casilla32.hasChildNodes() && casilla33.hasChildNodes();
+
   if (horizontal1) {
     let imagen1 = casilla11.getElementsByTagName("IMG")[0];
     let imagen2 = casilla12.getElementsByTagName("IMG")[0];
     let imagen3 = casilla13.getElementsByTagName("IMG")[0];
+
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis12")) && (imagen3.classList.contains("equis13"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
-  }
-  if (horizontal2) {
-    let imagen1 = casilla21.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla22.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla23.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis21")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis23"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-  if (horizontal3) {
-    let imagen1 = casilla31.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla32.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla33.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis32")) && (imagen3.classList.contains("equis33"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-  if (vertical1) {
-    let imagen1 = casilla11.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla21.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla31.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis21")) && (imagen3.classList.contains("equis31"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-  if (vertical2) {
-    let imagen1 = casilla12.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla22.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla32.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis12")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis32"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-  if (vertical3) {
-    let imagen1 = casilla13.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla23.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla33.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis13")) && (imagen2.classList.contains("equis23")) && (imagen3.classList.contains("equis33"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-  if (diagonal1) {
-    let imagen1 = casilla11.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla22.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla33.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis33"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-  if (diagonal2) {
-    let imagen1 = casilla31.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla22.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla13.getElementsByTagName("IMG")[0];
-    if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis13"))) {
-      gameWinner.classList.toggle("visible1");
-      numberWinner.innerHTML = "1";
-      displayTurn.classList.toggle('noVisible');
-      reinicio();
-    }
-  }
-}
 
-function ganador2() {
-  horizontal1 = casilla11.hasChildNodes() && casilla12.hasChildNodes() && casilla13.hasChildNodes();
-  horizontal2 = casilla21.hasChildNodes() && casilla22.hasChildNodes() && casilla23.hasChildNodes();
-  horizontal3 = casilla31.hasChildNodes() && casilla32.hasChildNodes() && casilla33.hasChildNodes();
-  vertical1 = casilla11.hasChildNodes() && casilla21.hasChildNodes() && casilla31.hasChildNodes();
-  vertical2 = casilla12.hasChildNodes() && casilla22.hasChildNodes() && casilla32.hasChildNodes();
-  vertical3 = casilla13.hasChildNodes() && casilla23.hasChildNodes() && casilla33.hasChildNodes();
-  diagonal1 = casilla11.hasChildNodes() && casilla22.hasChildNodes() && casilla33.hasChildNodes();
-  diagonal2 = casilla31.hasChildNodes() && casilla22.hasChildNodes() && casilla13.hasChildNodes();
-  if (horizontal1) {
-    let imagen1 = casilla11.getElementsByTagName("IMG")[0];
-    let imagen2 = casilla12.getElementsByTagName("IMG")[0];
-    let imagen3 = casilla13.getElementsByTagName("IMG")[0];
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo12")) && (imagen3.classList.contains("circulo13"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (horizontal2) {
     let imagen1 = casilla21.getElementsByTagName("IMG")[0];
     let imagen2 = casilla22.getElementsByTagName("IMG")[0];
     let imagen3 = casilla23.getElementsByTagName("IMG")[0];
+
+    if ((imagen1.classList.contains("equis21")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis23"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo21")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo23"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (horizontal3) {
     let imagen1 = casilla31.getElementsByTagName("IMG")[0];
     let imagen2 = casilla32.getElementsByTagName("IMG")[0];
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
+    
+    if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis32")) && (imagen3.classList.contains("equis33"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo31")) && (imagen2.classList.contains("circulo32")) && (imagen3.classList.contains("circulo33"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (vertical1) {
     let imagen1 = casilla11.getElementsByTagName("IMG")[0];
     let imagen2 = casilla21.getElementsByTagName("IMG")[0];
     let imagen3 = casilla31.getElementsByTagName("IMG")[0];
+    
+    if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis21")) && (imagen3.classList.contains("equis31"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo21")) && (imagen3.classList.contains("circulo31"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (vertical2) {
     let imagen1 = casilla12.getElementsByTagName("IMG")[0];
     let imagen2 = casilla22.getElementsByTagName("IMG")[0];
     let imagen3 = casilla32.getElementsByTagName("IMG")[0];
+    
+    if ((imagen1.classList.contains("equis12")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis32"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo12")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo32"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (vertical3) {
     let imagen1 = casilla13.getElementsByTagName("IMG")[0];
     let imagen2 = casilla23.getElementsByTagName("IMG")[0];
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
+    
+    if ((imagen1.classList.contains("equis13")) && (imagen2.classList.contains("equis23")) && (imagen3.classList.contains("equis33"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo13")) && (imagen2.classList.contains("circulo23")) && (imagen3.classList.contains("circulo33"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (diagonal1) {
     let imagen1 = casilla11.getElementsByTagName("IMG")[0];
     let imagen2 = casilla22.getElementsByTagName("IMG")[0];
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
+    
+    if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis33"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo33"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
   }
+
   if (diagonal2) {
     let imagen1 = casilla31.getElementsByTagName("IMG")[0];
     let imagen2 = casilla22.getElementsByTagName("IMG")[0];
     let imagen3 = casilla13.getElementsByTagName("IMG")[0];
+    
+    if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis13"))) {
+      gameWinner.classList.toggle("visible1");
+      numberWinner.innerHTML = "1";
+      displayTurn.classList.toggle('noVisible');
+      allFilled = false;
+      reinicio();
+    }
+
     if ((imagen1.classList.contains("circulo31")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo13"))) {
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
+      allFilled = false;
       reinicio();
     }
+  }
+
+  if (allFilled) {
+    tie.classList.toggle('visible');
+    displayTurn.classList.toggle('noVisible');
+    reinicio();
   }
 }
 
