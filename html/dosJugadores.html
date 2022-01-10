@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles1.css">
+    <title>Juego de Gato</title>
+
+    <!-- Para agregar sweetalert por CDN -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CDN para el tema dark de la ventana modal de sweetalert -->
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Gato</h1>
+    
+    <div class="animation">
+      <img class="spider" src="../img/spiderman1.png" alt="Spiderman"><!-
+    -><img class="venom" src="../img/venom1.png" alt="Venom"><!-
+    -><img class="explo" src="../img/explosion1.png" alt="Explosión">
+    </div>
+
+    <div class="tablero">
+      <div class="casilla" id="cas1"></div>
+      <div class="casilla" id="cas2"></div>
+      <div class="casilla" id="cas3"></div>
+      <div class="casilla" id="cas4"></div>
+      <div class="casilla" id="cas5"></div>
+      <div class="casilla" id="cas6"></div>
+      <div class="casilla" id="cas7"></div>
+      <div class="casilla" id="cas8"></div>
+      <div class="casilla" id="cas9"></div>
+    </div>
+
+    <p class="turno" id="turn">Turno del jugador <span id="numPlayer"></span></p>
+    <p class="winner" id="win">¡¡¡El jugador <span id="winplayer"></span> ha ganado!!!</p>
+    <p class="tie" id="Tie">¡¡¡Ambos quedaron empates!!!</p>
+  
+    <script src="../script/main1.js"></script>
+  </body>
+</html>
