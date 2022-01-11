@@ -9,7 +9,7 @@ Swal.fire({
   confirmButtonText: 'Un jugador',
   denyButtonText: `Dos jugadores`,
   confirmButtonColor: "#00f",
-  denyButtonColor: "#f00",
+  denyButtonColor: "#f00"
 }).then((result) => {
   if (result.isConfirmed) {
     setTimeout( function() { window.location.href = "../html/unjugador.html"; }, 1000 );
