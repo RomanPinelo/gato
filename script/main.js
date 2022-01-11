@@ -12,8 +12,8 @@ Swal.fire({
   denyButtonColor: "#f00"
 }).then((result) => {
   if (result.isConfirmed) {
-    setTimeout( function() { window.location.href = "../html/unjugador.html"; }, 1000 );
+    setTimeout( function() { window.location.href = "https://romanpinelo.github.io/html/unjugador.html"; }, 1000 );
   } else if (result.isDenied) {
-    setTimeout( function() { window.location.href = "../html/dosjugadores.html"; }, 1000 );
+    setTimeout( function() { window.location.href = "https://romanpinelo.github.io/html/dosjugadores.html"; }, 1000 );
   }
 })
