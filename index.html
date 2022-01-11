@@ -6,20 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Juego de Gato</title>
-
-    <!-- Para agregar sweetalert por CDN -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- CDN para el tema dark de la ventana modal de sweetalert -->
-    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
   </head>
 
   <body>
 
-    <script src="./script/main.js"></script>
+    <h1 class="animate__animated animate__backInDown">¿Qué modo de juego deseas?</h1>
+
+    <div class="buttonContainer animate__animated animate__backInUp">
+      <a class="onePlayer" href="./html/unJugador.html">Un jugador</a>
+      <a class="twoPlayer" href="./html/dosJugadores.html">Dos jugadores</a>
+    </div>
 
   </body>
 

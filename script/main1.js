@@ -425,7 +425,7 @@ function reinicio() {
       if (result.isConfirmed) {
         location.reload();
       } else {
-        setTimeout( function() { window.location.href = "https://romanpinelo.github.io/gato/"; }, 1000 );
+        setTimeout( function() { window.location.href = "../index.html"; }, 1000 );
       }
     })
   }, 1500);
