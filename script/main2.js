@@ -22,6 +22,7 @@ var tie = document.getElementById("Tie");
 var playerWinner = document.getElementById("win");
 var cpuWinner = document.getElementById("win1");
 var turno = true;
+var block1 = document.getElementById("bloqueo1");
 
 function playerTurn() {
   console.log(`Soy la función playerTurn`);
@@ -254,6 +255,7 @@ function winnerOrTie() {
     let imagen3 = casilla13.getElementsByTagName("IMG")[0];
 
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis12")) && (imagen3.classList.contains("equis13"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -261,6 +263,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo12")) && (imagen3.classList.contains("circulo13"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -274,6 +277,7 @@ function winnerOrTie() {
     let imagen3 = casilla23.getElementsByTagName("IMG")[0];
 
     if ((imagen1.classList.contains("equis21")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis23"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -281,6 +285,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo21")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo23"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -294,6 +299,7 @@ function winnerOrTie() {
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis32")) && (imagen3.classList.contains("equis33"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -301,6 +307,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo31")) && (imagen2.classList.contains("circulo32")) && (imagen3.classList.contains("circulo33"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -314,6 +321,7 @@ function winnerOrTie() {
     let imagen3 = casilla31.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis21")) && (imagen3.classList.contains("equis31"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -321,6 +329,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo21")) && (imagen3.classList.contains("circulo31"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -334,6 +343,7 @@ function winnerOrTie() {
     let imagen3 = casilla32.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis12")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis32"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -341,6 +351,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo12")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo32"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -354,6 +365,7 @@ function winnerOrTie() {
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis13")) && (imagen2.classList.contains("equis23")) && (imagen3.classList.contains("equis33"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -361,6 +373,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo13")) && (imagen2.classList.contains("circulo23")) && (imagen3.classList.contains("circulo33"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -374,6 +387,7 @@ function winnerOrTie() {
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis33"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -381,6 +395,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo33"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -394,6 +409,7 @@ function winnerOrTie() {
     let imagen3 = casilla13.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis13"))) {
+      block1.classList.toggle("blockActive1");
       playerWinner.classList.toggle("visible1");
       allFilled = false;
       clearInterval(game);
@@ -401,6 +417,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo31")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo13"))) {
+      block1.classList.toggle("blockActive1");
       cpuWinner.classList.toggle("visible2");
       allFilled = false;
       clearInterval(game);
@@ -409,6 +426,7 @@ function winnerOrTie() {
   }
 
   if (allFilled) {
+    block1.classList.toggle("blockActive1");
     tie.classList.toggle('visible');
     clearInterval(game);
     reinicio();
