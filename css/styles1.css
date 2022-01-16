@@ -152,3 +152,19 @@ p {
 .turno.noVisible {
   display: none;
 }
+
+/***************************************************************************************
+  Elemento que bloquea el tablero al momento que uno de los jugadores gana  
+***************************************************************************************/
+.bloqueo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+}
+
+.bloqueo.blockActive {
+  transform: scale(1);
+}

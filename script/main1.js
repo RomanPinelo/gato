@@ -14,6 +14,7 @@ var tie = document.getElementById("Tie");
 var gameWinner = document.getElementById("win");
 var numberWinner = document.getElementById("winplayer");
 var turno = true;
+var block = document.getElementById("bloqueo");
 
 
 function inicio() {
@@ -234,6 +235,7 @@ function winnerOrTie() {
     let imagen3 = casilla13.getElementsByTagName("IMG")[0];
 
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis12")) && (imagen3.classList.contains("equis13"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -242,6 +244,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo12")) && (imagen3.classList.contains("circulo13"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -256,6 +259,7 @@ function winnerOrTie() {
     let imagen3 = casilla23.getElementsByTagName("IMG")[0];
 
     if ((imagen1.classList.contains("equis21")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis23"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -264,6 +268,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo21")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo23"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -278,6 +283,7 @@ function winnerOrTie() {
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis32")) && (imagen3.classList.contains("equis33"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -286,6 +292,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo31")) && (imagen2.classList.contains("circulo32")) && (imagen3.classList.contains("circulo33"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -300,6 +307,7 @@ function winnerOrTie() {
     let imagen3 = casilla31.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis21")) && (imagen3.classList.contains("equis31"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -308,6 +316,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo21")) && (imagen3.classList.contains("circulo31"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -322,6 +331,7 @@ function winnerOrTie() {
     let imagen3 = casilla32.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis12")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis32"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -330,6 +340,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo12")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo32"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -344,6 +355,7 @@ function winnerOrTie() {
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis13")) && (imagen2.classList.contains("equis23")) && (imagen3.classList.contains("equis33"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -352,6 +364,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo13")) && (imagen2.classList.contains("circulo23")) && (imagen3.classList.contains("circulo33"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -366,6 +379,7 @@ function winnerOrTie() {
     let imagen3 = casilla33.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis11")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis33"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -374,6 +388,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo11")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo33"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -388,6 +403,7 @@ function winnerOrTie() {
     let imagen3 = casilla13.getElementsByTagName("IMG")[0];
     
     if ((imagen1.classList.contains("equis31")) && (imagen2.classList.contains("equis22")) && (imagen3.classList.contains("equis13"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "1";
       displayTurn.classList.toggle('noVisible');
@@ -396,6 +412,7 @@ function winnerOrTie() {
     }
 
     if ((imagen1.classList.contains("circulo31")) && (imagen2.classList.contains("circulo22")) && (imagen3.classList.contains("circulo13"))) {
+      block.classList.toggle("blockActive");
       gameWinner.classList.toggle("visible1");
       numberWinner.innerHTML = "2";
       displayTurn.classList.toggle('noVisible');
@@ -405,6 +422,7 @@ function winnerOrTie() {
   }
 
   if (allFilled) {
+    block.classList.toggle("blockActive");
     tie.classList.toggle('visible');
     displayTurn.classList.toggle('noVisible');
     reinicio();
